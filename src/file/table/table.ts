@@ -53,7 +53,7 @@ export class Table extends FileChild {
 
         this.root.push(
             new TableProperties({
-                borders: borders ?? {},
+                borders: borders,
                 width: width ?? { size: 100 },
                 indent,
                 float,

@@ -81,6 +81,7 @@ describe("Table", () => {
     describe("#constructor", () => {
         it("creates a table with the correct number of rows and columns", () => {
             const table = new Table({
+                borders: {}, // use default borders
                 rows: [
                     new TableRow({
                         children: [
@@ -152,6 +153,7 @@ describe("Table", () => {
 
         it("creates a table with the correct columnSpan and rowSpan", () => {
             const table = new Table({
+                borders: {},
                 rows: [
                     new TableRow({
                         children: [
@@ -218,6 +220,7 @@ describe("Table", () => {
 
         it("sets the table to fixed width layout", () => {
             const table = new Table({
+                borders: {},
                 rows: [
                     new TableRow({
                         children: [
@@ -238,6 +241,7 @@ describe("Table", () => {
 
         it("should center the table", () => {
             const table = new Table({
+                borders: {},
                 rows: [
                     new TableRow({
                         children: [
@@ -258,6 +262,7 @@ describe("Table", () => {
 
         it("should set the table to provided 100% width", () => {
             const table = new Table({
+                borders: {},
                 rows: [
                     new TableRow({
                         children: [
@@ -293,6 +298,7 @@ describe("Table", () => {
 
         it("should set the table to provided 1000 DXA", () => {
             const table = new Table({
+                borders: {},
                 rows: [
                     new TableRow({
                         children: [
@@ -331,6 +337,7 @@ describe("Table", () => {
         describe("#prepForXml", () => {
             it("inserts a paragraph at the end of the cell if it is empty", () => {
                 const table = new Table({
+                    borders: {},
                     rows: [
                         new TableRow({
                             children: [
@@ -447,6 +454,7 @@ describe("Table", () => {
     describe("#float", () => {
         it("sets the table float properties", () => {
             const table = new Table({
+                borders: {},
                 rows: [
                     new TableRow({
                         children: [
