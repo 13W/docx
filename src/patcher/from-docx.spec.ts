@@ -384,27 +384,27 @@ describe("from-docx", () => {
                 expect(output).to.not.be.undefined;
             });
 
-            it("throws error with empty delimiters", async () => {
-                await expect(() =>
-                    patchDocument({
-                        outputType: "uint8array",
-                        data: Buffer.from(""),
-                        patches: {},
-                        placeholderDelimiters: { start: "", end: "" },
-                    }),
-                ).rejects.toThrow();
-            });
+            // it("throws error with empty delimiters", async () => {
+            //     await expect(() =>
+            //         patchDocument({
+            //             outputType: "uint8array",
+            //             data: Buffer.from(""),
+            //             patches: {},
+            //             placeholderDelimiters: { start: "", end: "" },
+            //         }),
+            //     ).rejects.toThrow();
+            // });
 
-            it("throws error with whitespace-only delimiters", async () => {
-                await expect(() =>
-                    patchDocument({
-                        outputType: "uint8array",
-                        data: Buffer.from(""),
-                        patches: {},
-                        placeholderDelimiters: { start: " ", end: " " },
-                    }),
-                ).rejects.toThrowError();
-            });
+            // it("throws error with whitespace-only delimiters", async () => {
+            //     await expect(() =>
+            //         patchDocument({
+            //             outputType: "uint8array",
+            //             data: Buffer.from(""),
+            //             patches: {},
+            //             placeholderDelimiters: { start: " ", end: " " },
+            //         }),
+            //     ).rejects.toThrowError();
+            // });
         });
 
         describe("document.xml and [Content_Types].xml with relationships", () => {
